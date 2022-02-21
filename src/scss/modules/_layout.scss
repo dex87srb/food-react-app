@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-family: Helvetica, serif;
+	font-size: 16px;
+	background-image: url('../../img/background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1 {
+	margin-bottom: 50px;
+	color: #7aca25;
+	text-align: center;
+	text-transform: uppercase;
+    font-weight: normal;
+    &:first-letter {
+        color: orange;
+    }
+}
+
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+@media screen and( max-width:420px) {
+
+	#root{
+		max-width: 1000px;
+	margin: 0 auto;
+		
+	}
+}

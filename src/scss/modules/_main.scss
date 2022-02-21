@@ -1,0 +1,204 @@
+main {
+	max-width: 1000px;
+	margin: 120px auto 60px;
+	padding: 30px 20px;
+	background-color: rgba(255, 255, 255, .9);
+}
+
+.loader {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+    margin: 25px 0;
+     img {
+        position: relative;
+        display: block;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+#food-form form {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    input,select {
+        width: 100%;
+        max-width: 600px;
+        height: 44px;
+        margin-bottom: 30px;
+        padding: 5px 10px;
+        color: #666;
+        font-size: 16px;
+        -webkit-appearance: none;
+        border: solid 1px #ccc;
+        border-radius: 0;
+       
+    }
+
+    input{
+        &:focus{
+            border: solid 1px rgb(212, 149, 66);
+        }
+    }
+
+    select {
+        background-image: url('../../img/arrow.png');
+        background-size: 13px;
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+    }
+
+    button {
+        padding: 10px 25px;
+        background-color: orange;
+        border: none;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            opacity: .8;
+        }
+        &:disabled {
+            opacity: .5;
+            cursor: default;
+        }
+    }
+}
+
+
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+@media screen and( max-width:480px) {
+  
+    #recipes {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #recipes .recipe-element{
+        display: flex;
+        justify-content: center;
+       
+        
+    }
+    .recipe-element{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and( max-width:1000px) {
+  
+    #recipes {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #recipes .recipe-element{
+        display: flex;
+        width:290px;  
+        margin-right: 4%;
+        img{
+            width: 290px;
+        }
+        
+    }
+    .recipe-element{
+        display: flex;
+        flex-direction: column;
+        margin-left: 4%;
+    }
+   
+}
+
+
+.recipe-element {
+    position: relative;
+    width: 22%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    h3 {
+        font-size: 15px;
+    }
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+    img {
+        display: block;
+        width: 220px;
+        margin-bottom: 10px;
+    }
+    & .calories {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 10px;
+        right: 10px;
+        background: rgb(122, 202, 37);
+        color: #fff;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    & .labels {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        border-top: solid 1px black;
+        padding-top: 10px;
+        & .label {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 2px 5px;
+            background: #fff;
+            color: orange;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+    }
+}
+
+/*Calories input*/
+
+#calories{
+    display: flex;
+    
+}
+
+/* PLACEHOLDER STYLE */
+
+*::-webkit-input-placeholder { 
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  *::-moz-placeholder {
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  *:-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+  *:-moz-placeholder { 
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  
+
