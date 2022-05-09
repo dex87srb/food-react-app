@@ -1,4 +1,4 @@
-const selectHealth = ({ name, value, handleChangeHealth }) => (
+const SelectHealth = ({ name, value, handleChangeHealth }) => (
     <select name={name} value={value} onChange={handleChangeHealth} id="health">
         <option disabled >HEALTH</option>
         <option value="alcohol-free">Alcohol free</option>
@@ -9,4 +9,4 @@ const selectHealth = ({ name, value, handleChangeHealth }) => (
 
 )
 
-export default selectHealth;
+export default SelectHealth;

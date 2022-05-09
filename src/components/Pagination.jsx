@@ -3,10 +3,8 @@ import React from 'react'
 import uuid from 'react-uuid'
 
 function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
-    //const [pages] = useState(Math.round(data.length / dataLimit));
-    const [currentPage, setCurrentPage] = useState(1);
 
-    const recipeUpdate = React.useRef(false);
+    const [currentPage, setCurrentPage] = useState(1);
 
     React.useEffect(() => {
         window.scrollTo({ behavior: 'smooth', top: '620' });
@@ -14,9 +12,9 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
 
 
     React.useEffect(() => {
-        if (!recipeUpdate.current) {
-            setCurrentPage((page) => page = 1);
-        }
+
+        setCurrentPage((page) => page = 1);
+
     }, [data, setCurrentPage]);
 
     function goToNextPage() {
